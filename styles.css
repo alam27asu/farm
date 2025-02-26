@@ -1,0 +1,225 @@
+/* -------------------- IMPORTED FONTS -------------------------------------- */
+    @import url('https://fonts.googleapis.com/css2?family=Habibi&family=Irish+Grover&display=swap');
+    /*-------------------- CSS RESET ---------------------------------------------------*/
+html {
+    margin: 0;
+    padding: 0;
+}
+/* -------------------- ROOT VARIABLES --------------------------------------- */
+:root {
+    Green: #06A816;
+    Orange: #E75D02;
+    Black: #000000;
+    White: #ffffff;
+
+}
+body {
+    font-family: Habibi;
+    background-color: #ffffff;
+    color: #000000;
+}
+body h1, h2, h3 {
+    font-family: Irish Grover;
+}
+nav a {
+    text-decoration: none;
+    background-color: #E75D02;
+    border-width: 1.5px;
+    border-style: solid;
+    color: #ffffff;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+    
+}
+header {
+    background-color: #06A816;
+    color: #ffffff;
+    padding: 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+h1 {
+    font-size: 2.5em;
+}
+h2 {
+    font-size: 1.75em;
+}
+h3{
+    font-size: 1.25em;
+    text-align: center;
+}
+p{
+    font-size: 10px;
+}
+nav a#top {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    padding: 8px;
+
+}
+.titleCap{
+    display: flex;
+    flex-direction: column;
+    margin: 1px;
+}
+footer{
+    color: #ffffff;
+    padding: 1px;
+}
+.contact-hours {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #06A816;
+}
+.copy {
+    background-color: #ffffff;
+    color:#06A816;
+    text-align: center;
+}
+.fruitimg {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.vegimg {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.fruitimg figcaption {
+    position: absolute;
+    background-color: #000000;
+    opacity: 0.5;
+    color:#ffffff;
+}
+.vegimg figcaption {
+    position: absolute;
+    background-color: #000000;
+    opacity: 0.5;
+    color:#ffffff;
+}
+/* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
+@media screen and (max-width: 600px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+    header {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        padding: 2px;
+    }
+    nav ul {
+        grid-template-columns: 1fr;
+
+    }
+    .fruitimg {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        padding: 0;
+    }
+    .vegimg {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        padding: 0;
+    }
+}
+/*-------------------- MEDIA QUERY (medium) --------------------------------*/
+@media screen and (min-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+    }
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+    nav ul {
+        grid-template-columns: 1fr 1fr;
+    }
+    nav a {
+        display: flex;
+        flex-direction: column;
+    }
+    .fruitimg {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+    .vegimg {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+    footer {
+        width: 100%;
+    }
+}
+/*-------------------- MEDIA QUERY (large) ------------------------------------*/
+@media screen and (min-width: 992px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+    }
+    header {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+    nav ul {
+        grid-template-columns: 1fr 1fr;
+        float: right;
+    }
+    nav a {
+        display: flex;
+        flex-direction: column;
+    }
+    .fruitimg {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+    }
+    .vegimg {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+    }
+    footer {
+        width: 100%;
+    }
+}
+/*-------------------- MEDIA QUERY (xl) ---------------------------------------*/
+@media screen and (min-width: 1200px) {
+    main {
+        max-width: 1200px;
+    }
+    .fruitimg {
+        grid-template-columns:  1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    .vegimg {
+        grid-template-columns:  1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+}
